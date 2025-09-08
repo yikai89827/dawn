@@ -25,30 +25,35 @@
     background: rgba(0, 0, 0, 0.3);
   }
   .tsuki-header-content {
-    position: relative;
     z-index: 2;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
   }
+  .main-btn {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #333;
+  }
 {% endstyle %}
-
+<!-- 高端品牌展示区 -->
+<header class="tsuki-header">
+  <div class="tsuki-header-content">
+    {% comment %} <h1 class="h0">{{ section.settings.title | default: 'Elegance Redefined' }}</h1> {% endcomment %}
+    {% comment %}
+      <p class="h3">
+        {{ section.settings.subtitle | default: 'Discover our exclusive collection of tsuki womens fashion' }}
+      </p>
+    {% endcomment %}
+    <a href="{{ section.settings.button_link | default: '/pages/dresses' }}" class="main-btn button button--primary">
+      {{ section.settings.button_label | default: 'Shop Now' }}
+    </a>
+  </div>
+</header>
 <div class="page-width">
-  <!-- 高端品牌展示区 -->
-  <header class="tsuki-header">
-    <div class="tsuki-header-content">
-      {% comment %} <h1 class="h0">{{ section.settings.title | default: 'Elegance Redefined' }}</h1> {% endcomment %}
-      {% comment %}
-        <p class="h3">
-          {{ section.settings.subtitle | default: 'Discover our exclusive collection of tsuki womens fashion' }}
-        </p>
-      {% endcomment %}
-      <a href="{{ section.settings.button_link | default: '/pages/shop' }}" class="button button--primary">
-        {{ section.settings.button_label | default: 'Shop Now' }}
-      </a>
-    </div>
-  </header>
-
   <!-- 精选产品轮播 -->
   <div class="section-spacing">
     <div class="section-header text-center">
