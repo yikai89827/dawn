@@ -8,7 +8,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Enjoy 10% off your first order and received exclusive offers in the future。",
             "text_alignment": "center",
             "color_scheme": "scheme-1",
             "link": ""
